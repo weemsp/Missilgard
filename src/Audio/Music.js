@@ -114,7 +114,7 @@ function setMusicPosition(tim) {
 
 function musicLoopCheck() {
 	//console.log(music.currentTime);
-	if (!jukeboxSpecs.shuffle && song && song.loopEnd && music.currentTime >= song.loopEnd) {
+	if (song && song.loopEnd && music.currentTime >= song.loopEnd) {
 		var d = song.loopEnd - song.loopStart;
 		//music.pause();
 		music.currentTime -= d;

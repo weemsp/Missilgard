@@ -10,7 +10,7 @@ function makeSound(nom) {
 			this.pause();
 		}, false);
 	fec.src = "src/Audio/SFX/"+nom;
-	fec.volume = settings.sfx;
+	//fec.volume = settings.sfx;
 	document.body.appendChild(fec);
 	return fec;
 }
@@ -18,7 +18,7 @@ var sfx = {
 	
 }
 function initSFX() {
-	lastSFXvolume = settings.sfx;
+	//lastSFXvolume = settings.sfx;
 	sfx = {
 		"blip1_0" : makeSound("blip1.wav"), //audacity: chirp: 440Hz, 0.8-0.1, .05s
 		"blip1_1" : makeSound("blip1.wav"),
@@ -30,8 +30,8 @@ function initSFX() {
 
 function playSFX(name) {
 	//console.log(name)
-	if (!settings.sfx)
-		return;
+	//if (!settings.sfx)
+	//	return;
 	sfx[name].play();
 }
 
@@ -44,14 +44,12 @@ function setSFXVolume(quant) {
 	}
 }
 
-class SFXCycler {
-	constructor(names) {
-		this.names = names;
-		this.cycle = 0;
-	}
-	play() {
-		this.cycle = this.cycle % this.names.length;
-		playSFX(this.names[this.cycle]);
-		this.cycle++;
-	}
+function SFXCycler(names) {
+	this.names = names;
+	this.cycle = 0;
+}
+SFXCycler.prototype.play = function() {
+	this.cycle = this.cycle % this.names.length;
+	playSFX(this.names[this.cycle]);
+	this.cycle++;
 }
