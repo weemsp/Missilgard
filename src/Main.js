@@ -12,13 +12,13 @@ var emergencyStuff;
 //var stageBackground;
 
 function begin() {
-	window.addEventListener("resize", setBackgroundWidth);
-	
 	backgroundBox = document.getElementById("BackgroundBox");
 	
 	initSFX();
 	
-	engine.run();
+	ENGINE_INT.start();
+	
+	startNewGame();
 }
 
 function doNothing() {};
