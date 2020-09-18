@@ -14,6 +14,8 @@ var emergencyStuff;
 function begin() {
 	backgroundBox = document.getElementById("BackgroundBox");
 	
+	buildGameView();
+	
 	initSFX();
 	
 	ENGINE_INT.start();
