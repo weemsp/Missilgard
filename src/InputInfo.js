@@ -13,6 +13,7 @@ const KEYBINDS = {
 	39 : "R_right",
 	38 : "R_up",
 	40 : "R_down",
+	45 : "R_gear",
 	96 : "R_gear",
 }
 
