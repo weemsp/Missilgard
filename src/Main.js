@@ -29,7 +29,6 @@ function menu() {
 	var iframe = document.querySelector('iframe');
 	iframe.contentDocument.body.addEventListener('mouseup', function() {
 		doc.querySelector('iframe').src='game.html';
-		begin();
 	});
 }
 
