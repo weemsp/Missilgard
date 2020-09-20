@@ -15,21 +15,14 @@ function begin() {
 	backgroundBox = document.getElementById("BackgroundBox");
 	
 	buildGameView();
+	buildMenuView()
 	
 	initSFX();
 	
 	ENGINE_INT.start();
 	
-	startNewGame();
-}
-
-
-function menu() {
-	var doc = document;
-	var iframe = document.querySelector('iframe');
-	iframe.contentDocument.body.addEventListener('mouseup', function() {
-		doc.querySelector('iframe').src='game.html';
-	});
+	switchToMenu(new TitleMenu());
+	//startNewGame();
 }
 
 function doNothing() {};
