@@ -19,3 +19,4 @@ GameEngine.prototype.addBullet = function(bul) {
 GameEngine.prototype.getRandomPlayer = function() {
 	return randomTerm(this.players);
 }
+GameEngine.prototype.isGame = true;

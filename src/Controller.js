@@ -33,4 +33,10 @@ const ENGINE_INT = {
 
 function startNewGame() {
 	runnee = new GameEngine();
+	
+}
+
+function switchToMenu(mnm) {
+	runnee = mnm;
+	setMenuView(mnm);
 }

@@ -3,6 +3,7 @@ const NUM_BULLET_IMAGES = 16;
 
 function buildGameView() {
 	gameElems = {};
+	gameElems.box = document.getElementById("GameContainer");
 	gameElems.players = [];
 	gameElems.players[0] = document.getElementById("player0");
 	gameElems.boss = document.getElementById("boss");
@@ -13,7 +14,10 @@ function buildGameView() {
 }
 
 function viewGame(game) {
-	//TODO someone other than me, do this -P
+	if (!game.isGame)
+		return;//this might be dumb but I don't currently care -P
+	gameElems.box.hidden = false;
+	menuElems.box.hidden = true;
 	moveGameElemCenter(gameElems.players[0], game.players[0].x, game.players[0].y);
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
 		if (game.bullets[i]) {
@@ -26,7 +30,6 @@ function viewGame(game) {
 }
 
 function moveGameElemCenter(elem, x, y) {
-	//TODO account for width of images so they're centered
 	elem.style.left = x+"px";
 	elem.style.top = y+"px";
 }
