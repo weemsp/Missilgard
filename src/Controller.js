@@ -11,6 +11,7 @@ const ENGINE_INT = {
 	},
 	run : function() {
 		var desiredTime = Date.now() + this.frameDelay;
+		var thisser = this;
 		musicLoopCheck();
 		updateInputsBefore();
 		if (this.active && runnee) {
@@ -20,7 +21,7 @@ const ENGINE_INT = {
 		updateInputsAfter();
 		var until = desiredTime - Date.now();
 		if (until > 0) {
-			this.interval = setTimeout(()=>this.run(), until);
+			this.interval = setTimeout(function(){thisser.run()}, until);
 		} else {
 			console.log("lagging by " + (-until));
 			this.run();
@@ -32,4 +33,10 @@ const ENGINE_INT = {
 
 function startNewGame() {
 	runnee = new GameEngine();
+	
+}
+
+function switchToMenu(mnm) {
+	runnee = mnm;
+	setMenuView(mnm);
 }

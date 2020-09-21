@@ -3,15 +3,20 @@ function GameEngine(args) {
 	this.players = [
 		new PlayerShip()
 	]
-	this.enemies = [];
+	this.boss = new Missilgatlr();
 	this.bullets = [];
 }
 GameEngine.prototype.update = function() {
-	this.players.forEach(e=>e.update(this));
-	this.enemies.forEach(e=>e.update(this));
-	this.bullets.forEach(b=>b.update(this));
+	var thisser = this;
+	this.players.forEach(function(p){p.update(thisser)});
+	this.boss.update(this);
+	this.bullets.forEach(function(b){b.update(thisser)});
 	this.bullets = this.bullets.filter(bul=>bul.isAlive());
 }
 GameEngine.prototype.addBullet = function(bul) {
 	this.bullets.push(bul);
 }
+GameEngine.prototype.getRandomPlayer = function() {
+	return randomTerm(this.players);
+}
+GameEngine.prototype.isGame = true;

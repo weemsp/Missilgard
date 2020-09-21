@@ -1,11 +1,11 @@
-const PLAYER_MAX_SPEED = 5;
+const PLAYER_MAX_SPEED = 10;
 
 function PlayerShip() {
 	this.x = WIDTH/2;
 	this.y = HEIGHT*4/5;
 }
 PlayerShip.prototype.update = function() {
-	console.log(inputVector.x, inputVector.y);
+	//console.log(inputVector.x, inputVector.y);
 	this.x = Math.max(0, Math.min(WIDTH, this.x + PLAYER_MAX_SPEED * inputVector.x));
-	this.y = Math.max(0, Math.min(WIDTH, this.x + PLAYER_MAX_SPEED * inputVector.y));
+	this.y = Math.max(0, Math.min(WIDTH, this.y + PLAYER_MAX_SPEED * inputVector.y));
 }

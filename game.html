@@ -18,19 +18,41 @@
 				margin : 0px;
 				padding : 0px;
 			}
-			.bullet {
+			.ScreenContainer {
+				overflow:hidden;
+				left: 0;
+				top: 0;
+				width: 800px;
+				height: 600px;
+				position : absolute;
+				border-width: 0px;
+				margin : 0px;
+				padding : 0px;
+			}
+			#GameContainer img {
 				left: 0;
 				top: 0;
 				position : absolute;
 				border-width: 0px;
 				margin : 0px;
 				padding : 0px;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			}
+			#MenuContainer button {
+				margin: 0;
+				position: absolute;
+				left: 50%;
+				-ms-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
 			}
 		</style>
 		<script type="text/javascript" src="src/Main.js"></script>
 		<script type="text/javascript" src="src/Controller.js"></script>
 		<script type="text/javascript" src="src/View/Game.js"></script>
+		<script type="text/javascript" src="src/View/Menu.js"></script>
 		<script type="text/javascript" src="src/Math/Vector.js"></script>
+		<script type="text/javascript" src="src/Math/Misc.js"></script>
 		
 		<script type="text/javascript" src="src/Menus/Base.js"></script>
 		<script type="text/javascript" src="src/Menus/Title.js"></script>
@@ -44,17 +66,43 @@
 		<script type="text/javascript" src="src/Input.js"></script>
 		
 		<script type="text/javascript" src="src/Player.js"></script>
-		<script type="text/javascript" src="src/Enemies/Base.js"></script>
+		
+		<script type="text/javascript" src="src/Bosses/Base.js"></script>
+		<script type="text/javascript" src="src/Bosses/Missilgatlr.js"></script>
+		
 		<script type="text/javascript" src="src/Bullets/Base.js"></script>
+		<script type="text/javascript" src="src/Bullets/Straight.js"></script>
 		
 		<script type="text/javascript" src="src/Game.js"></script>
 		
 	</head>
 	<body>
 		<div id="BackgroundBox">
-			<div id="GameContainer">
+			<div id="GameContainer" class="ScreenContainer">
+				<img id="player0" src="src/Images/Player.png" />
+				<img id="boss" />
+				<img id="bullet0" src="src/Images/Bullet.png" />
+				<img id="bullet1" src="src/Images/Bullet.png" />
+				<img id="bullet2" src="src/Images/Bullet.png" />
+				<img id="bullet3" src="src/Images/Bullet.png" />
+				<img id="bullet4" src="src/Images/Bullet.png" />
+				<img id="bullet5" src="src/Images/Bullet.png" />
+				<img id="bullet6" src="src/Images/Bullet.png" />
+				<img id="bullet7" src="src/Images/Bullet.png" />
+				<img id="bullet8" src="src/Images/Bullet.png" />
+				<img id="bullet9" src="src/Images/Bullet.png" />
+				<img id="bullet10" src="src/Images/Bullet.png" />
+				<img id="bullet11" src="src/Images/Bullet.png" />
+				<img id="bullet12" src="src/Images/Bullet.png" />
+				<img id="bullet13" src="src/Images/Bullet.png" />
+				<img id="bullet14" src="src/Images/Bullet.png" />
+				<img id="bullet15" src="src/Images/Bullet.png" />
 			</div>
-			<div id="MenuContainer">
+			<div id="MenuContainer" class="ScreenContainer" hidden>
+				<button id="button0">
+				<button id="button1">
+				<button id="button2">
+				<button id="button3">
 			</div>
 		</div>
 		<script>
