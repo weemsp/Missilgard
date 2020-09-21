@@ -22,7 +22,9 @@ function viewGame(game) {
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
 		if (game.bullets[i]) {
 			gameElems.bullets[i].hidden = false;
+			gameElems.bullets[i].src = 'src/Images/Homing.png'
 			moveGameElemCenter(gameElems.bullets[i], game.bullets[i].x, game.bullets[i].y);
+			rotateGameElement(gameElems.bullets[i], game.bullets[i].deg);
 		} else {
 			gameElems.bullets[i].hidden = true;
 		}
@@ -32,4 +34,8 @@ function viewGame(game) {
 function moveGameElemCenter(elem, x, y) {
 	elem.style.left = x+"px";
 	elem.style.top = y+"px";
+}
+
+function rotateGameElement(elem, deg) {
+	elem.style.transform = `rotate(${deg}deg)`;
 }

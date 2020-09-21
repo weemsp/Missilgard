@@ -3,7 +3,8 @@ function GameEngine(args) {
 	this.players = [
 		new PlayerShip()
 	]
-	this.boss = new Missilgatlr();
+	//this.boss = new Missilgatlr();
+	this.boss = new HomingBossTest();
 	this.bullets = [];
 }
 GameEngine.prototype.update = function() {
