@@ -9,13 +9,13 @@ function buildGameView() {
 	gameElems.boss = document.getElementById("boss");
 	gameElems.bullets = [];
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
-		gameElems.bullets[i] = document.getElementById("bullet"+i);
+		gameElems.bullets[i] = document.getElementById("bullet" + i);
 	}
 }
 
 function viewGame(game) {
 	if (!game.isGame)
-		return;//this might be dumb but I don't currently care -P
+		return; //this might be dumb but I don't currently care -P
 	gameElems.box.hidden = false;
 	menuElems.box.hidden = true;
 	moveGameElemCenter(gameElems.players[0], game.players[0].x, game.players[0].y);
@@ -32,8 +32,8 @@ function viewGame(game) {
 }
 
 function moveGameElemCenter(elem, x, y) {
-	elem.style.left = x+"px";
-	elem.style.top = y+"px";
+	elem.style.left = x + "px";
+	elem.style.top = y + "px";
 }
 
 function rotateGameElement(elem, deg) {
