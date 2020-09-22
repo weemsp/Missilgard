@@ -95,6 +95,14 @@ class VectorRect extends CustomVector {
 	}
 }
 
+function distanceCoordToCoord(fx, fy, tx, ty) {
+	return new VectorRect(tx-fx, ty-fy).r;
+}
+
+function distanceCoordToObj(fx, fy, to) {
+	return distanceCoordToCoord(fx, fy, to.x, to.y);
+}
+
 function angleCoordToCoord(fx, fy, tx, ty) {
 	return new VectorRect(tx-fx, ty-fy).theta;
 }
