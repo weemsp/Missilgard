@@ -2,8 +2,12 @@ function TitleMenu() {
 	this.title = "Missilgard";
 	this.buttons = [
 		{
-			text : "Play",
+			text : "Run",
 			onclick : startNewGame
+		},
+		{
+			text : "Boss Select",
+			onclick : ()=>switchToMenu(new BossSelectMenu())
 		},
 		{
 			text : "blip",
