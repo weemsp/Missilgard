@@ -22,6 +22,7 @@ function viewGame(game) {
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
 		if (game.bullets[i]) {
 			gameElems.bullets[i].hidden = false;
+			gameElems.bullets[i].src = game.bullets[i].srcImage;
 			moveGameElemCenter(gameElems.bullets[i], game.bullets[i].x, game.bullets[i].y);
 			rotateGameElement(gameElems.bullets[i], game.bullets[i].deg);
 		} else {
