@@ -3,11 +3,11 @@ function BossSelectMenu() {
 	this.buttons = [
 		{
 			text : "Missilgatlr",
-			onclick : startNewGame
-		},
+			onclick : function() { startNewGame('Missilgatlr') }	//Not entirely sure why I need to wrap this in
+		},															//a function, but it didn't work otherwise
 		{
 			text : "Homing",
-			onclick : startNewGame
+			onclick : function () { startNewGame('Homing') }
 		},
 	]
 }

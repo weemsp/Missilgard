@@ -31,8 +31,8 @@ const ENGINE_INT = {
 	active : true,
 }
 
-function startNewGame() {
-	runnee = new GameEngine();
+function startNewGame(boss) {
+	runnee = new GameEngine(boss);
 	
 }
 
