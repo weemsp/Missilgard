@@ -25,6 +25,7 @@ function initSFX() {
 		"blip1_2" : makeSound("blip1.wav"),
 		"blip1" : new SFXCycler(["blip1_0", "blip1_1", "blip1_2"]),
 		"blipdown" : makeSound("blipdown.wav"), //audacity: chirp: 440-220Hz, 0.8-0.1, .06s
+		"damage" : makeSound("oof.mp3"), //roblox death sound
 	}
 }
 

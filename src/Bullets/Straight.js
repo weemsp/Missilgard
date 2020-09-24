@@ -6,7 +6,6 @@ function StraightBullet(x, y, radius, velocity) {
 }
 StraightBullet.prototype = Object.create(Bullet.prototype);
 StraightBullet.prototype.update = function(game) {
-	//console.log(this.x, this.y);
 	this.x += this.velocity.x;
 	this.y += this.velocity.y;
 }
