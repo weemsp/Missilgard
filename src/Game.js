@@ -1,9 +1,21 @@
 
-function GameEngine(args) {
+function GameEngine(boss) {
 	this.players = [
 		new PlayerShip()
 	]
-	this.boss = new Missilgatlr();
+	switch(boss) {
+		case 'Missilgatlr':
+			this.boss = new Missilgatlr();
+			break;
+		case 'Homing':
+			this.boss = new HomingBoss();
+			break;
+		default:
+			this.boss = new Missilgatlr();
+	}
+	
+	//this.boss = new Missilgatlr();
+	//this.boss = new HomingBoss();
 	this.bullets = [];
 }
 GameEngine.prototype.update = function() {
