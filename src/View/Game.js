@@ -1,5 +1,5 @@
 var gameElems;
-const NUM_BULLET_IMAGES = 16;
+const NUM_BULLET_IMAGES = 101;
 
 function buildGameView() {
 	gameElems = {};
