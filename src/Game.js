@@ -13,6 +13,9 @@ function GameEngine(boss) {
 		case 'Evil':
 			this.boss = new EvilBoss();
 			break;
+		case 'Flurry':
+			this.boss = new FlurryBoss();
+			break;
 		default:
 			this.boss = new Missilgatlr();
 	}
