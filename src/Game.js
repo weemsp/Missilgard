@@ -13,8 +13,11 @@ function GameEngine(boss) {
 		case 'Evil':
 			this.boss = new EvilBoss();
 			break;
+		case 'Spiralism':
+			this.boss = new Spiralism();
+			break;
 		default:
-			this.boss = new Missilgatlr();
+			throw boss + " is NOT a BOSS!"
 	}
 	
 	//this.boss = new Missilgatlr();
