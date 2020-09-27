@@ -17,6 +17,9 @@ function BossSelectMenu() {
 			text : "Spiralism",
 			onclick : function () { startNewGame('Spiralism') }
 		},
+			text : "Flurry",
+			onclick : function () { startNewGame('Flurry') }
+		}
 	]
 }
 BossSelectMenu.prototype = Object.create(Menu.prototype);
