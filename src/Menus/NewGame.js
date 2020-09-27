@@ -9,6 +9,10 @@ function BossSelectMenu() {
 			text : "Homing",
 			onclick : function () { startNewGame('Homing') }
 		},
+		{
+			text : "Evil",
+			onclick : function () { startNewGame('Evil') }
+		},
 	]
 }
 BossSelectMenu.prototype = Object.create(Menu.prototype);

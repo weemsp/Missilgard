@@ -10,6 +10,9 @@ function GameEngine(boss) {
 		case 'Homing':
 			this.boss = new HomingBoss();
 			break;
+		case 'Evil':
+			this.boss = new EvilBoss();
+			break;
 		default:
 			this.boss = new Missilgatlr();
 	}
