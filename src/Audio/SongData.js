@@ -2,7 +2,8 @@ const CC_BY_3 = "Creative Commons Attribution 3.0 License";
 const CC_BY_4 = "Creative Commons Attribution 4.0 International License";
 
 const SONG_LIST = [
-	
+	{name:"Flap 2", intensity:1,
+		by:"PeriTune", yt:"RF79ViqrtMc", site:"https://peritune.com/flap2/", siten:"PeriTune.com", sc:"sei_peridot/flap2", license:CC_BY_4},
 ]
 
 var SONG_HASH = {};
