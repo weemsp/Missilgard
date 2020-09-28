@@ -30,7 +30,7 @@ function setMenuView(menu) {
 			menuElems.buttons[i].style.width = '150px';
 			menuElems.buttons[i].style.left = (WIDTH/2) +"px";
 			// menuElems.buttons[i].style.top = Math.floor(HEIGHT*(i+1)/(menu.buttons.length+1)) +"px";
-			menuElems.buttons[i].style.top = ((40*(i+1))+(40*i))+150 +"px";
+			menuElems.buttons[i].style.top = 80*i+190 +"px";
 			menuElems.buttons[i].alt = menu.buttons[i].text;
 			menuElems.buttons[i].src = menu.buttons[i].background;
 			menuElems.buttons[i].onclick = menu.buttons[i].onclick;
