@@ -18,6 +18,7 @@ function begin() {
 	buildMenuView();
 
 	initSFX();
+	initMusic();
 
 	ENGINE_INT.start();
 

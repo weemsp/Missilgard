@@ -49,7 +49,7 @@
 				-ms-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 			}
-			#MenuContainer input{
+			#MenuContainer input {
 				margin: 0;
 				position: absolute;
 				top: 0;
@@ -213,9 +213,10 @@
 				<button id="button1">
 				<button id="button2">
 				<button id="button3"> -->
-				<input id="vol-control" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100)" onchange="setSFXVolume(this.value/100)"></input>
+				<input id="vol-control" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100);setMusicVolume(this.value/100)" onchange="setSFXVolume(this.value/100);setMusicVolume(this.value/100)"></input>
 			</div>
 		</div>
+		<audio id="Music" hidden />
 		<script>
 			begin();
 		</script>
