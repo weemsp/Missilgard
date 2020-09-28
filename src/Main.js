@@ -13,14 +13,14 @@ var emergencyStuff;
 
 function begin() {
 	backgroundBox = document.getElementById("BackgroundBox");
-	
+
 	buildGameView();
-	buildMenuView()
-	
+	buildMenuView();
+
 	initSFX();
-	
+
 	ENGINE_INT.start();
-	
+
 	switchToMenu(new TitleMenu());
 	//startNewGame();
 }
