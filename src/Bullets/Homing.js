@@ -4,7 +4,7 @@ function HomingBullet(x, y, radius, velocity) {
     this.radius = radius;
     this.velocity = velocity;
     this.homingCD = 200;
-    this.srcImage = "src/Images/Homing.png"
+    this.srcImage = "src/Images/missile.png";
 }
 HomingBullet.prototype = Object.create(Bullet.prototype);
 HomingBullet.prototype.update = function (game) {
@@ -13,7 +13,7 @@ HomingBullet.prototype.update = function (game) {
         this.velocity = new VectorPolar(6.66, angleCoordToObj(this.x, this.y, game.getRandomPlayer()) + randomOffset(.1))
         this.deg = radToDeg(this.velocity.theta);
         this.homingCD--;
-     }  
+     }
     this.x += this.velocity.x / 2;
     this.y += this.velocity.y / 2;
 

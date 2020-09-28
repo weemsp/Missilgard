@@ -20,9 +20,9 @@ function GameEngine(boss) {
 			this.boss = new FlurryBoss();
 			break;
 		default:
-			throw boss + " is NOT a BOSS!"
+			throw boss + " is NOT a BOSS!";
 	}
-	
+
 	//this.boss = new Missilgatlr();
 	//this.boss = new HomingBoss();
 	this.bullets = [];
