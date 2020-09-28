@@ -1,5 +1,5 @@
 var menuElems;
-const NUM_MENU_BUTTONS = 4;
+const NUM_MENU_BUTTONS = 10;
 
 function buildMenuView() {
 	menuElems = {};
