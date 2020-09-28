@@ -14,6 +14,9 @@ function BossSelectMenu() {
 			onclick : function () { startNewGame('Evil') }
 		},
 		{
+			text : "Spiralism",
+			onclick : function () { startNewGame('Spiralism') }
+		},
 			text : "Flurry",
 			onclick : function () { startNewGame('Flurry') }
 		}
