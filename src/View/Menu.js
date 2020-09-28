@@ -21,14 +21,14 @@ function setMenuView(menu) {
 	menuElems.titlebox.style.position = 'fixed';
 	menuElems.titlebox.style.width = "300px";
 	menuElems.titlebox.style.top = "75px";
-	menuElems.titlebox.style.right = (WIDTH/2)-150 +"px";
+	menuElems.titlebox.style.left = (WIDTH/2)-150 +"px";
 
 	for (var i = 0; i < NUM_MENU_BUTTONS; i++) {
 		if (menu.buttons[i]) {
 			menuElems.buttons[i].hidden = false;
 			menuElems.buttons[i].style.position = 'fixed';
 			menuElems.buttons[i].style.width = '150px';
-			menuElems.buttons[i].style.right = (WIDTH/2)-75 +"px";
+			menuElems.buttons[i].style.left = (WIDTH/2) +"px";
 			// menuElems.buttons[i].style.top = Math.floor(HEIGHT*(i+1)/(menu.buttons.length+1)) +"px";
 			menuElems.buttons[i].style.top = ((40*(i+1))+(40*i))+150 +"px";
 			menuElems.buttons[i].alt = menu.buttons[i].text;
