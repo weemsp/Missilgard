@@ -5,24 +5,33 @@ function BossSelectMenu() {
 	this.buttons = [
 		{
 			text : "Missilgatlr",
-			onclick : function() { startNewGame('Missilgatlr') }
-			//Not entirely sure why I need to wrap this in
-		},															//a function, but it didn't work otherwise
+			onclick : function() { startNewGame('Missilgatlr') },	//Not entirely sure why I need to wrap this in
+			background : 'src/Images/Buttons/MissilgatlrButton.png'	//a function, but it didn't work otherwise
+		},
 		{
 			text : "Homing",
-			onclick : function () { startNewGame('Homing') }
+			onclick : function () { startNewGame('Homing') },
+			background : 'src/Images/Buttons/HomingButton.png'
 		},
 		{
 			text : "Evil",
-			onclick : function () { startNewGame('Evil') }
+			onclick : function () { startNewGame('Evil') },
+			background : 'src/Images/Buttons/EvilButton.png'
 		},
 		{
 			text : "Spiralism",
-			onclick : function () { startNewGame('Spiralism') }
+			onclick : function () { startNewGame('Spiralism') },
+			background : 'src/Images/Buttons/SpiralismButton.png'
 		},
 		{
 			text : "Flurry",
-			onclick : function () { startNewGame('Flurry') }
+			onclick : function () { startNewGame('Flurry') },
+			background : 'src/Images/Buttons/FlurryButton.png'
+		},
+		{
+			text : "Exit",
+			onclick : function () { switchToMenu(new TitleMenu()) },
+			background : 'src/Images/Buttons/ExitButton.png'
 		}
 	]
 }

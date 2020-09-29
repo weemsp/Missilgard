@@ -1,10 +1,12 @@
 var menuElems;
-const NUM_MENU_BUTTONS = 4;
+const NUM_MENU_BUTTONS = 10;
 
 function buildMenuView() {
 	menuElems = {};
 	menuElems.box = document.getElementById("MenuContainer");
 	menuElems.titlebox = document.getElementById("titlebox");
+	menuElems.volSlider = document.getElementById("vol-control");
+	menuElems.volSlider.style.top = HEIGHT-40 +"px";
 	menuElems.buttons = [];
 	for (var i = 0; i < NUM_MENU_BUTTONS; i++) {
 		menuElems.buttons[i] = document.getElementById("button"+i);
@@ -30,10 +32,15 @@ function setMenuView(menu) {
 			menuElems.buttons[i].style.width = '150px';
 			menuElems.buttons[i].style.left = (WIDTH/2) +"px";
 			// menuElems.buttons[i].style.top = Math.floor(HEIGHT*(i+1)/(menu.buttons.length+1)) +"px";
-			menuElems.buttons[i].style.top = ((40*(i+1))+(40*i))+150 +"px";
+			menuElems.buttons[i].style.top = 80*i+190 +"px";
 			menuElems.buttons[i].alt = menu.buttons[i].text;
 			menuElems.buttons[i].src = menu.buttons[i].background;
 			menuElems.buttons[i].onclick = menu.buttons[i].onclick;
+			if (menu.buttons[i].text == 'Exit') {
+				menuElems.buttons[i].style.width = '100px';
+				menuElems.buttons[i].style.left = 70 +"px";
+				menuElems.buttons[i].style.top = 40 +"px";
+			}
 		} else {
 			menuElems.buttons[i].hidden = true;
 		}

@@ -5,17 +5,17 @@ function TitleMenu() {
 	this.buttons = [
 		{
 			text : "Play",
-			onclick : startNewGame,
+			onclick : function(){startNewGame("Rush")},
 			background : 'src/Images/Buttons/PlayButton.png'
 		},
 		{
 			text : "Boss Select",
-			onclick : ()=>switchToMenu(new BossSelectMenu()),
+			onclick : function(){switchToMenu(new BossSelectMenu())},
 			background : 'src/Images/Buttons/BossButton.png'
 		},
 		{
 			text : "blip",
-			onclick : ()=>playSFX("blip1"),
+			onclick : function(){playSFX("blip1")},
 			background : 'src/Images/Buttons/OrangeButton.png'
 		},
 	]

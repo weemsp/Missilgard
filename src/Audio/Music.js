@@ -8,7 +8,7 @@ var musicIsAlt;
 
 function initMusic() {
 	music = document.getElementById("Music");
-	setMusicShuffle(jukeboxSpecs.shuffle);
+	setMusicShuffle(false);
 }
 
 function playMusic(sin) {
@@ -33,8 +33,8 @@ function playMusic(sin) {
 	musicIsAlt = false;
 	music.src = song.src;
 	music.currentTime = 0;
-	music.volume = settings.music;
-	if (settings.music)
+	//music.volume = settings.music;
+	//if (settings.music)
 		music.play();
 }
 

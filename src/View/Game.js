@@ -20,6 +20,7 @@ function viewGame(game) {
 	menuElems.box.hidden = true;
 	gameElems.box.style.backgroundImage = "url('src/Images/Backgrounds/background.gif')";
 	moveGameElemCenter(gameElems.players[0], game.players[0].x, game.players[0].y);
+	rotateGameElement(gameElems.players[0], game.players[0].deg);
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
 		if (game.bullets[i]) {
 			gameElems.bullets[i].hidden = false;

@@ -49,7 +49,7 @@
 				-ms-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 			}
-			#MenuContainer input{
+			#MenuContainer input {
 				margin: 0;
 				position: absolute;
 				top: 0;
@@ -69,6 +69,7 @@
 		<script type="text/javascript" src="src/Menus/Base.js"></script>
 		<script type="text/javascript" src="src/Menus/Title.js"></script>
 		<script type="text/javascript" src="src/Menus/NewGame.js"></script>
+		<script type="text/javascript" src="src/Menus/VictoryMenu.js"></script>
 
 		<script type="text/javascript" src="src/Audio/Music.js"></script>
 		<script type="text/javascript" src="src/Audio/SongData.js"></script>
@@ -205,17 +206,20 @@
 			</div>
 			<div id="MenuContainer" class="ScreenContainer" hidden>
 				<img id="titlebox" />
-				<input type="image" id="button0" src="src/Images/Buttons/OrangeButton.png"/>
+				<input type="image" id="button0" />
 				<input type="image" id="button1" />
 				<input type="image" id="button2" />
 				<input type="image" id="button3" />
-				<!-- <button id="button0">
-				<button id="button1">
-				<button id="button2">
-				<button id="button3"> -->
+				<input type="image" id="button4" />
+				<input type="image" id="button5" />
+				<input type="image" id="button6" />
+				<input type="image" id="button7" />
+				<input type="image" id="button8" />
+				<input type="image" id="button9" />
 				<input id="vol-control" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100)" onchange="setSFXVolume(this.value/100)"></input>
 			</div>
 		</div>
+		<audio id="Music" hidden />
 		<script>
 			begin();
 		</script>
