@@ -71,7 +71,7 @@ GameEngine.prototype.win = function() {
 		this.boss = new (BOSS_RUSH_ORDER[this.bossRushIndex])();
 		this.timeLeft = this.timeMax;
 	} else {
-		switchToMenu(new VictoryMenu());
+		switchToMenu(new VictoryMenu(true));
 	}
 }
 GameEngine.prototype.isGame = true;
