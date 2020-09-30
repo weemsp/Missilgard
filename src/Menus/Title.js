@@ -1,7 +1,7 @@
 function TitleMenu() {
 	this.title = "Missilgard";
 	this.background = "src/Images/Backgrounds/menu_bg.png";
-	this.titleImgSrc = "src/Images/menu_title.png";
+	this.titleImgSrc = "src/Images/TitleBar.png";
 	this.buttons = [
 		{
 			text : "Play",
