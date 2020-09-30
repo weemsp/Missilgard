@@ -9,8 +9,8 @@ function BossSelectMenu() {
 			background : 'src/Images/Buttons/MissilgatlrButton.png'	//a function, but it didn't work otherwise
 		},
 		{
-			text : "Homing",
-			onclick : function () { startNewGame('Homing') },
+			text : "Stratoblaster",
+			onclick : function () { startNewGame('Stratoblaster') },
 			background : 'src/Images/Buttons/HomingButton.png'
 		},
 		{

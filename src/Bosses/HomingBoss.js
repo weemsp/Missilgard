@@ -2,6 +2,7 @@ function HomingBoss() {
 	this.bulletCD = 20;
 	this.homingMissiles = 2;
 }
+
 HomingBoss.prototype = Object.create(Boss.prototype);
 HomingBoss.prototype.bulletRate = 15;
 HomingBoss.prototype.update = function (game) {
@@ -24,3 +25,4 @@ HomingBoss.prototype.update = function (game) {
 		}
 	}
 }
+

@@ -1,6 +1,6 @@
 const BOSS_RUSH_ORDER = [
 	Missilgatlr,
-	HomingBoss,
+	Stratoblaster,
 	EvilBoss,
 	Spiralism,
 	FlurryBoss,
@@ -21,8 +21,8 @@ function GameEngine(boss) {
 		case 'Missilgatlr':
 			this.boss = new Missilgatlr();
 			break;
-		case 'Homing':
-			this.boss = new HomingBoss();
+		case 'Stratoblaster':
+			this.boss = new Stratoblaster();
 			break;
 		case 'Evil':
 			this.boss = new EvilBoss();
