@@ -3,10 +3,10 @@ function VictoryMenu(victory) {
     this.background = "src/Images/Backgrounds/menu_bg.png";
     
     if(victory) {
-    this.titleImgSrc = "src/Images/Victory.png";
+    this.titleImgSrc = "src/Images/VictoryBar.png";
     }
     else {
-        this.titleImgSrc = "src/Images/Defeat.png";
+        this.titleImgSrc = "src/Images/DefeatBar.png";
     }
 
 	this.buttons = [

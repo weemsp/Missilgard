@@ -1,9 +1,8 @@
 const BOSS_RUSH_ORDER = [
 	Missilgatlr,
-	HomingBoss,
+	Stratoblaster,
 	EvilBoss,
 	Spiralism,
-	FlurryBoss,
 ]
 
 function GameEngine(boss) {
@@ -17,12 +16,13 @@ function GameEngine(boss) {
 			this.bossRushIndex = 0;
 			this.doingBossRush = true;
 			this.timeMax = 30*FPS;
+			this.players.forEach(function(p){p.hp = 5});
 			break;
 		case 'Missilgatlr':
 			this.boss = new Missilgatlr();
 			break;
-		case 'Homing':
-			this.boss = new HomingBoss();
+		case 'Stratoblaster':
+			this.boss = new Stratoblaster();
 			break;
 		case 'Evil':
 			this.boss = new EvilBoss();
@@ -30,12 +30,10 @@ function GameEngine(boss) {
 		case 'Spiralism':
 			this.boss = new Spiralism();
 			break;
-		case 'Flurry':
-			this.boss = new FlurryBoss();
-			break;
 		default:
 			throw boss + " is NOT a BOSS!";
 	}
+	playMusic(this.boss.song);
 	this.timeLeft = this.timeMax;
 	//this.boss = new Missilgatlr();
 	//this.boss = new HomingBoss();
@@ -57,6 +55,9 @@ GameEngine.prototype.update = function() {
 			}
 		}
 	}
+	if (!this.players.find(function(p){return p.hp>0})) {
+		this.lose();
+	}
 	this.bullets = this.bullets.filter(bul=>bul.isAlive());
 }
 GameEngine.prototype.addBullet = function(bul) {
@@ -69,9 +70,14 @@ GameEngine.prototype.win = function() {
 	if (this.doingBossRush && this.bossRushIndex < BOSS_RUSH_ORDER.length-1) {
 		this.bossRushIndex++;
 		this.boss = new (BOSS_RUSH_ORDER[this.bossRushIndex])();
+		playMusic(this.boss.song);
+		this.players.forEach(function(p){p.hp++});
 		this.timeLeft = this.timeMax;
 	} else {
 		switchToMenu(new VictoryMenu(true));
 	}
+}
+GameEngine.prototype.lose = function() {
+	switchToMenu(new VictoryMenu(false));
 }
 GameEngine.prototype.isGame = true;
