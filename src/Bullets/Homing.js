@@ -4,7 +4,7 @@ function HomingBullet(x, y, radius, velocity) {
     this.radius = radius;
     this.velocity = velocity;
     this.homingCD = 200;
-    this.srcImage = "src/Images/missile.png";
+    this.srcImage = "src/Images/Bullets/HomingMissile.png";
 }
 HomingBullet.prototype = Object.create(Bullet.prototype);
 HomingBullet.prototype.update = function (game) {
