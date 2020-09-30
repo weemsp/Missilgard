@@ -28,17 +28,13 @@ function setMenuView(menu) {
 	for (var i = 0; i < NUM_MENU_BUTTONS; i++) {
 		if (menu.buttons[i]) {
 			menuElems.buttons[i].hidden = false;
-			menuElems.buttons[i].style.position = 'fixed';
-			menuElems.buttons[i].style.width = '150px';
-			menuElems.buttons[i].style.left = (WIDTH/2) +"px";
-			// menuElems.buttons[i].style.top = Math.floor(HEIGHT*(i+1)/(menu.buttons.length+1)) +"px";
-			menuElems.buttons[i].style.top = 80*i+200 +"px";
-			menuElems.buttons[i].alt = menu.buttons[i].text;
-			menuElems.buttons[i].src = menu.buttons[i].background;
+			menuElems.buttons[i].style.left = (WIDTH/2)-75 +"px";
+			menuElems.buttons[i].style.top = 80*i+170 +"px";
+			menuElems.buttons[i].innerHTML = menu.buttons[i].text;
+			menuElems.buttons[i].style.backgroundImage = "url('" + menu.buttons[i].background + "')";
 			menuElems.buttons[i].onclick = menu.buttons[i].onclick;
 			if (menu.buttons[i].text == 'Exit') {
-				menuElems.buttons[i].style.width = '100px';
-				menuElems.buttons[i].style.left = 70 +"px";
+				menuElems.buttons[i].style.left = 40 +"px";
 				menuElems.buttons[i].style.top = 40 +"px";
 			}
 		} else {

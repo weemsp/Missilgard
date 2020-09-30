@@ -54,6 +54,23 @@
 				transform: translate(-50%, -50%);
 
 			}
+			.btn {
+				background-size: 150px;
+				background-repeat: no-repeat;
+				background-color:  transparent;
+				border: none;
+				text-align: center;
+				color: white;
+				font-size: auto;
+				font-family: nebula;
+				line-height: 79%;
+				width: 150px;
+				height: 57px;
+			}
+			@font-face {
+			    font-family: "nebula";
+			    src: url("src/Fonts/Nebula-Regular.otf") format("opentype");
+			}
 		</style>
 		<script type="text/javascript" src="src/Main.js"></script>
 		<script type="text/javascript" src="src/Controller.js"></script>
@@ -202,16 +219,16 @@
 			</div>
 			<div id="MenuContainer" class="ScreenContainer" hidden>
 				<img id="titlebox" />
-				<input type="image" id="button0" />
-				<input type="image" id="button1" />
-				<input type="image" id="button2" />
-				<input type="image" id="button3" />
-				<input type="image" id="button4" />
-				<input type="image" id="button5" />
-				<input type="image" id="button6" />
-				<input type="image" id="button7" />
-				<input type="image" id="button8" />
-				<input type="image" id="button9" />
+				<button id="button0" class="btn"></button>
+				<button id="button1" class="btn"></button>
+				<button id="button2" class="btn"></button>
+				<button id="button3" class="btn"></button>
+				<button id="button4" class="btn"></button>
+				<button id="button5" class="btn"></button>
+				<button id="button6" class="btn"></button>
+				<button id="button7" class="btn"></button>
+				<button id="button8" class="btn"></button>
+				<button id="button9" class="btn"></button>
 				<input id="vol-control" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100); setMusicVolume(this.value/100)" onchange="setSFXVolume(this.value/100); setMusicVolume(this.value/100)"></input>
 			</div>
 		</div>

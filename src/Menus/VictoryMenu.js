@@ -11,9 +11,9 @@ function VictoryMenu(victory) {
 
 	this.buttons = [
 		{
-			text : "Return to main menu",
+			text : "Return to menu",
 			onclick : function(){switchToMenu(new TitleMenu())},
-			background : 'src/Images/Buttons/ReturnToMenu.png'
+			background : 'src/Images/Buttons/RedBtn.png'
 		}
 	]
 }

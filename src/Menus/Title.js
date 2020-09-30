@@ -6,17 +6,17 @@ function TitleMenu() {
 		{
 			text : "Play",
 			onclick : function(){startNewGame("Rush")},
-			background : 'src/Images/Buttons/PlayButton.png'
+			background : 'src/Images/Buttons/GreenBtn.png'
 		},
 		{
 			text : "Boss Select",
 			onclick : function(){switchToMenu(new BossSelectMenu())},
-			background : 'src/Images/Buttons/BossButton.png'
+			background : 'src/Images/Buttons/OrangeBtn.png'
 		},
 		{
 			text : "blip",
 			onclick : function(){playSFX("blip1")},
-			background : 'src/Images/Buttons/OrangeButton.png'
+			background : 'src/Images/Buttons/OrangeBtn.png'
 		},
 	]
 }
