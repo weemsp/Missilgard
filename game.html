@@ -39,15 +39,11 @@
 				border-width: 0px;
 				margin : 0px;
 				padding : 0px;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
 			}
 			#MenuContainer button {
 				margin: 0;
 				position: absolute;
 				left: 50%;
-				-ms-transform: translate(-50%, -50%);
-				transform: translate(-50%, -50%);
 			}
 			#MenuContainer input {
 				margin: 0;
@@ -216,7 +212,7 @@
 				<input type="image" id="button7" />
 				<input type="image" id="button8" />
 				<input type="image" id="button9" />
-				<input id="vol-control" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100)" onchange="setSFXVolume(this.value/100)"></input>
+				<input id="vol-control" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100); setMusicVolume(this.value/100)" onchange="setSFXVolume(this.value/100); setMusicVolume(this.value/100)"></input>
 			</div>
 		</div>
 		<audio id="Music" hidden />

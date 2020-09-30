@@ -34,8 +34,8 @@ function viewGame(game) {
 }
 
 function moveGameElemCenter(elem, x, y) {
-	elem.style.left = x + "px";
-	elem.style.top = y + "px";
+	elem.style.left = x - elem.width/2 + "px";
+	elem.style.top = y - elem.height/2 + "px";
 }
 
 function rotateGameElement(elem, deg) {

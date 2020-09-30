@@ -6,6 +6,7 @@ Missilgatlr.prototype = Object.create(Boss.prototype);
 Missilgatlr.prototype.bulletRate = 4;
 Missilgatlr.prototype.restTime = 48;
 Missilgatlr.prototype.burstSize = 16;
+Missilgatlr.prototype.song = "Flap 2";
 Missilgatlr.prototype.update = function(game) {
 	//console.log(game.getRandomPlayer())
 	if (this.bulletsLeft > 0) {

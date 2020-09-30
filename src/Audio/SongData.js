@@ -4,6 +4,8 @@ const CC_BY_4 = "Creative Commons Attribution 4.0 International License";
 const SONG_LIST = [
 	{name:"Flap 2", intensity:1,
 		by:"PeriTune", yt:"RF79ViqrtMc", site:"https://peritune.com/flap2/", siten:"PeriTune.com", sc:"sei_peridot/flap2", license:CC_BY_4},
+	{name:"Seahorse Dreams", intensity:3/4, kong:1, coolmath:1, armor:1,
+		by:"Kubbi", yt:"DLvrDRRaftQ", site:"https://kubbimusic.com/track/seahorse-dreams", siten:"KubbiMusic.com", sc:"kubbi/seahorse-dreams", ng:538406},
 ]
 
 var SONG_HASH = {};
