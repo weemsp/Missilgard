@@ -40,6 +40,14 @@
 				margin : 0px;
 				padding : 0px;
 			}
+			#health{
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: red;
+				text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white, -1px -1px 0 white;
+				font-size: 25px;
+			}
 			#MenuContainer button {
 				margin: 0;
 				position: absolute;
@@ -95,6 +103,7 @@
 	<body>
 		<div id="BackgroundBox">
 			<div id="GameContainer" class="ScreenContainer">
+				<div id="health"></div>
 				<img id="player0" src="src/Images/Player.png" />
 				<img id="boss" />
 				<img id="bullet0" src="src/Images/Bullet.png" />
