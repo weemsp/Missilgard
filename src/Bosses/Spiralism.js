@@ -8,7 +8,6 @@ Spiralism.prototype.bulletRate = 10;
 Spiralism.prototype.restTime = 60;
 Spiralism.prototype.burstSize = 30;
 Spiralism.prototype.update = function(game) {
-    var bul = new SpiralBullet(WIDTH/2, HEIGHT/2, 20, Math.PI, 100, 25);
     console.log(this.bulletsLeft);
     if (this.bulletsLeft > 0) {
         console.log("Straight Storm");
