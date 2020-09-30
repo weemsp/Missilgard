@@ -3,7 +3,6 @@ const BOSS_RUSH_ORDER = [
 	Stratoblaster,
 	EvilBoss,
 	Spiralism,
-	FlurryBoss,
 ]
 
 function GameEngine(boss) {
@@ -30,9 +29,6 @@ function GameEngine(boss) {
 			break;
 		case 'Spiralism':
 			this.boss = new Spiralism();
-			break;
-		case 'Flurry':
-			this.boss = new FlurryBoss();
 			break;
 		default:
 			throw boss + " is NOT a BOSS!";

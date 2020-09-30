@@ -5,8 +5,8 @@ function BossSelectMenu() {
 	this.buttons = [
 		{
 			text : "Missilgatlr",
-			onclick : function() { startNewGame('Missilgatlr') },	//Not entirely sure why I need to wrap this in
-			background : 'src/Images/Buttons/MissilgatlrButton.png'	//a function, but it didn't work otherwise
+			onclick : function() { startNewGame('Missilgatlr') },
+			background : 'src/Images/Buttons/MissilgatlrButton.png'
 		},
 		{
 			text : "Stratoblaster",
@@ -22,11 +22,6 @@ function BossSelectMenu() {
 			text : "Spiralism",
 			onclick : function () { startNewGame('Spiralism') },
 			background : 'src/Images/Buttons/SpiralismButton.png'
-		},
-		{
-			text : "Flurry",
-			onclick : function () { startNewGame('Flurry') },
-			background : 'src/Images/Buttons/FlurryButton.png'
 		},
 		{
 			text : "Exit",
