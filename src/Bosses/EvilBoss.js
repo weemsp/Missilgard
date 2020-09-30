@@ -4,6 +4,7 @@ function EvilBoss() {
 }
 EvilBoss.prototype = Object.create(Boss.prototype);
 EvilBoss.prototype.bulletRate = 60;
+EvilBoss.prototype.song = "Irregular";
 EvilBoss.prototype.update = function (game) {
     
     this.bulletCD--;
