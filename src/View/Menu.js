@@ -5,8 +5,6 @@ function buildMenuView() {
 	menuElems = {};
 	menuElems.box = document.getElementById("MenuContainer");
 	menuElems.titlebox = document.getElementById("titlebox");
-	menuElems.volSlider = document.getElementById("vol-control");
-	menuElems.volSlider.style.top = HEIGHT-40 +"px";
 	menuElems.buttons = [];
 	for (var i = 0; i < NUM_MENU_BUTTONS; i++) {
 		menuElems.buttons[i] = document.getElementById("button"+i);
@@ -20,16 +18,12 @@ function setMenuView(menu) {
 	menuElems.box.style.backgroundImage = "url('"+ menu.background +"')";
 	menuElems.titlebox.src = menu.titleImgSrc;
 	menuElems.titlebox.alt = menu.title;
-	menuElems.titlebox.style.position = 'fixed';
-	menuElems.titlebox.style.width = "300px";
-	menuElems.titlebox.style.top = "75px";
-	menuElems.titlebox.style.left = (WIDTH/2)-150 +"px";
 
 	for (var i = 0; i < NUM_MENU_BUTTONS; i++) {
 		if (menu.buttons[i]) {
 			menuElems.buttons[i].hidden = false;
-			menuElems.buttons[i].style.left = (WIDTH/2)-75 +"px";
-			menuElems.buttons[i].style.top = 80*i+170 +"px";
+			menuElems.buttons[i].style.left = (WIDTH/2)-150 +"px";
+			menuElems.buttons[i].style.top = 80*i+80 +"px";
 			menuElems.buttons[i].innerHTML = menu.buttons[i].text;
 			menuElems.buttons[i].style.backgroundImage = "url('" + menu.buttons[i].background + "')";
 			menuElems.buttons[i].onclick = menu.buttons[i].onclick;

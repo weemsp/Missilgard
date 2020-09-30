@@ -1,6 +1,6 @@
 function VictoryMenu(victory) {
 	this.title = "Victory Screen";
-    this.background = "src/Images/Backgrounds/menu_bg.png";
+    this.background = "src/Images/Backgrounds/MediumBackground.png";
 
     if(victory) {
     this.titleImgSrc = "src/Images/VictoryBar.png";
@@ -11,9 +11,14 @@ function VictoryMenu(victory) {
 
 	this.buttons = [
 		{
+			text : "Play again",
+			onclick: function(){startNewGame("Rush")},
+			background : 'src/Images/Buttons/GreenBtn.png'
+		},
+		{
 			text : "Return to menu",
 			onclick : function(){switchToMenu(new TitleMenu())},
-			background : 'src/Images/Buttons/RedBtn.png'
+			background : 'src/Images/Buttons/OrangeBtn.png'
 		}
 	]
 }

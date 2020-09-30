@@ -1,6 +1,6 @@
 function BossSelectMenu() {
 	this.title = "Difficulty";
-	this.background = "src/Images/Backgrounds/menu_bg.png";
+	this.background = "src/Images/Backgrounds/MediumBackground.png";
 	this.titleImgSrc = "src/Images/BossSelectBar.png";
 	this.buttons = [
 		{
