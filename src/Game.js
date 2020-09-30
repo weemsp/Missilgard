@@ -1,9 +1,8 @@
 const BOSS_RUSH_ORDER = [
 	Missilgatlr,
-	HomingBoss,
+	Stratoblaster,
 	EvilBoss,
 	Spiralism,
-	FlurryBoss,
 ]
 
 function GameEngine(boss) {
@@ -22,17 +21,14 @@ function GameEngine(boss) {
 		case 'Missilgatlr':
 			this.boss = new Missilgatlr();
 			break;
-		case 'Homing':
-			this.boss = new HomingBoss();
+		case 'Stratoblaster':
+			this.boss = new Stratoblaster();
 			break;
 		case 'Evil':
 			this.boss = new EvilBoss();
 			break;
 		case 'Spiralism':
 			this.boss = new Spiralism();
-			break;
-		case 'Flurry':
-			this.boss = new FlurryBoss();
 			break;
 		default:
 			throw boss + " is NOT a BOSS!";
