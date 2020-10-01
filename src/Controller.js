@@ -27,6 +27,9 @@ const ENGINE_INT = {
 			this.run();
 		}
 	},
+	stop : function() {
+		clearInterval(this.interval)
+	},
 	interval : null,
 	active : true,
 }

@@ -41,6 +41,7 @@ function GameEngine(boss) {
 }
 GameEngine.prototype.update = function() {
 	this.timeLeft--;
+	this.timePortion = this.timeLeft / this.timeMax;
 	if (this.timeLeft <= 0) {
 		this.win();
 	}
