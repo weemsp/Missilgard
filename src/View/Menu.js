@@ -5,6 +5,7 @@ function buildMenuView() {
 	menuElems = {};
 	menuElems.box = document.getElementById("MenuContainer");
 	menuElems.titlebox = document.getElementById("titlebox");
+	menuElems.VolumeBar = document.getElementById("VolumeBar");
 	menuElems.buttons = [];
 	for (var i = 0; i < NUM_MENU_BUTTONS; i++) {
 		menuElems.buttons[i] = document.getElementById("button"+i);
@@ -18,6 +19,10 @@ function setMenuView(menu) {
 	menuElems.box.style.backgroundImage = "url('"+ menu.background +"')";
 	menuElems.titlebox.src = menu.titleImgSrc;
 	menuElems.titlebox.alt = menu.title;
+	if (menu.title != "Missilgard")
+		menuElems.VolumeBar.hidden = true;
+	else
+		menuElems.VolumeBar.hidden = false;
 
 	for (var i = 0; i < NUM_MENU_BUTTONS; i++) {
 		if (menu.buttons[i]) {

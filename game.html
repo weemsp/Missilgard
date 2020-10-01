@@ -62,7 +62,7 @@
 				position: absolute;
 				/* left: 50%; */
 			}
-			#MenuContainer input {
+			/* #MenuContainer input {
 				margin: 0;
 				position: absolute;
 				top: 0;
@@ -70,6 +70,15 @@
 				-ms-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 
+			} */
+			#VolumeBar {
+				background-image: url('src/Images/VolumeBar.png');
+				background-repeat: no-repeat;
+				position: fixed;
+				width: 225px;
+				height: 63px;
+				top: 415px;
+				left: 285px;
 			}
 			.btn {
 				background-size: 150px;
@@ -93,6 +102,11 @@
 				width: 300px;
 				left: 250px;
 				top: 50px;
+			}
+			#VolumeControl {
+				position: fixed;
+				top: 437px;
+				left: 355px;
 			}
 		</style>
 		<script type="text/javascript" src="src/Main.js"></script>
@@ -252,7 +266,9 @@
 				<button id="button7" class="btn"></button>
 				<button id="button8" class="btn"></button>
 				<button id="button9" class="btn"></button>
-				<input id="vol-control" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100); setMusicVolume(this.value/100)" onchange="setSFXVolume(this.value/100); setMusicVolume(this.value/100)"></input>
+				<div id="VolumeBar">
+					<input id="VolumeControl" type="range" min="0" max="100" step="1" oninput="setSFXVolume(this.value/100); setMusicVolume(this.value/100)" onchange="setSFXVolume(this.value/100); setMusicVolume(this.value/100)"></input>
+				</div>
 			</div>
 		</div>
 		<audio id="Music" hidden />
