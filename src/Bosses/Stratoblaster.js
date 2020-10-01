@@ -14,6 +14,7 @@ function Stratoblaster() {
 
 Stratoblaster.prototype = Object.create(Boss.prototype);
 Stratoblaster.prototype.bulletRate = 4;
+Stratoblaster.prototype.song = "Seahorse Dreams";
 Stratoblaster.prototype.update = function (game) {
 
     //console.log(game.getRandomPlayer())

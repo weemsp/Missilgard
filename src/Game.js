@@ -10,6 +10,7 @@ function GameEngine(boss) {
 		new PlayerShip()
 	]
 	this.timeMax = 60*FPS;
+	this.startingBoss = boss;
 	switch(boss) {
 		case "Rush":
 			this.boss = new Missilgatlr();
@@ -75,10 +76,10 @@ GameEngine.prototype.win = function() {
 		this.players.forEach(function(p){p.hp++});
 		this.timeLeft = this.timeMax;
 	} else {
-		switchToMenu(new VictoryMenu(true));
+		switchToMenu(new VictoryMenu(true, this.startingBoss));
 	}
 }
 GameEngine.prototype.lose = function() {
-	switchToMenu(new VictoryMenu(false));
+	switchToMenu(new VictoryMenu(false, this.startingBoss));
 }
 GameEngine.prototype.isGame = true;

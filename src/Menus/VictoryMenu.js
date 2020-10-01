@@ -1,4 +1,4 @@
-function VictoryMenu(victory) {
+function VictoryMenu(victory, startingBoss) {
 	this.title = "Victory Screen";
     this.background = "src/Images/Backgrounds/MediumBackground.png";
 
@@ -12,7 +12,7 @@ function VictoryMenu(victory) {
 	this.buttons = [
 		{
 			text : "Play again",
-			onclick: function(){startNewGame("Rush")},
+			onclick: function(){startNewGame(startingBoss)},
 			background : 'src/Images/Buttons/GreenBtn.png'
 		},
 		{
