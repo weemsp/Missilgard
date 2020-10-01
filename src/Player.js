@@ -7,7 +7,7 @@ function PlayerShip() {
 PlayerShip.prototype.update = function() {
 	//console.log(inputVector.x, inputVector.y);
 	this.x = Math.max(0, Math.min(WIDTH, this.x + PLAYER_MAX_SPEED * inputVector.x));
-	this.y = Math.max(0, Math.min(WIDTH, this.y + PLAYER_MAX_SPEED * inputVector.y));
+	this.y = Math.max(0, Math.min(HEIGHT, this.y + PLAYER_MAX_SPEED * inputVector.y));
 	if (this.iframes > 0) {
 		this.iframes--;
 	}
