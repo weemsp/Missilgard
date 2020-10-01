@@ -7,6 +7,7 @@ function buildGameView() {
 	gameElems.players = [];
 	gameElems.players[0] = document.getElementById("player0");
 	gameElems.boss = document.getElementById("boss");
+	gameElems.health = document.getElementById("health");
 	gameElems.bullets = [];
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
 		gameElems.bullets[i] = document.getElementById("bullet" + i);
@@ -18,7 +19,7 @@ function viewGame(game) {
 		return; //this might be dumb but I don't currently care -P
 	gameElems.box.hidden = false;
 	menuElems.box.hidden = true;
-	gameElems.box.style.backgroundImage = "url('src/Images/Backgrounds/background.gif')";
+	gameElems.health.innerHTML = game.players[0].hp;
 	moveGameElemCenter(gameElems.players[0], game.players[0].x, game.players[0].y);
 	rotateGameElement(gameElems.players[0], game.players[0].deg);
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {

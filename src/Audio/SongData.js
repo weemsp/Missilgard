@@ -6,6 +6,9 @@ const SONG_LIST = [
 		by:"PeriTune", yt:"RF79ViqrtMc", site:"https://peritune.com/flap2/", siten:"PeriTune.com", sc:"sei_peridot/flap2", license:CC_BY_4},
 	{name:"Seahorse Dreams", intensity:3/4, kong:1, coolmath:1, armor:1,
 		by:"Kubbi", yt:"DLvrDRRaftQ", site:"https://kubbimusic.com/track/seahorse-dreams", siten:"KubbiMusic.com", sc:"kubbi/seahorse-dreams", ng:538406},
+	{name:"Irregular", intensity:1,
+		by:"PeriTune", yt:"bvgXS3sukT4", site:"https://peritune.com/blog/2020/02/28/irregular/", siten:"PeriTune.com", sc:"sei_peridot/irregular", license:CC_BY_4},
+	
 ]
 
 var SONG_HASH = {};
