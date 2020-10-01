@@ -32,8 +32,8 @@ Stratoblaster.prototype.update = function (game) {
                 this.cascadeOffsetBy *= -1;
                 this.cascadeCount++;
             }
-            game.addBullet(new StraightBullet(WIDTH/2 + this.cascadeOffset, HEIGHT/5, 5, new VectorPolar(6, angleCoordToObj(WIDTH/2 + this.cascadeOffset, HEIGHT/5, {x: WIDTH/2 + this.cascadeOffset, y: HEIGHT}))));
-            game.addBullet(new StraightBullet(WIDTH/2 - this.cascadeOffset, HEIGHT/5, 5, new VectorPolar(6, angleCoordToObj(WIDTH/2 - this.cascadeOffset, HEIGHT/5, {x: WIDTH/2 - this.cascadeOffset, y: HEIGHT}))));
+            game.addBullet(new StraightBullet(WIDTH/2 + this.cascadeOffset, HEIGHT/5, 5, new VectorPolar(6, Math.PI)));
+            game.addBullet(new StraightBullet(WIDTH/2 - this.cascadeOffset, HEIGHT/5, 5, new VectorPolar(6, Math.PI)));
             this.cascadeOffset += this.cascadeOffsetBy;
 
             this.bulletCD = this.bulletRate;
