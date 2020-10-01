@@ -8,6 +8,7 @@ function buildGameView() {
 	gameElems.players[0] = document.getElementById("player0");
 	gameElems.boss = document.getElementById("boss");
 	gameElems.health = document.getElementById("health");
+	gameElems.timeLeft = document.getElementById("CountDownTimer");
 	gameElems.bullets = [];
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
 		gameElems.bullets[i] = document.getElementById("bullet" + i);
@@ -20,6 +21,7 @@ function viewGame(game) {
 	gameElems.box.hidden = false;
 	menuElems.box.hidden = true;
 	gameElems.health.innerHTML = game.players[0].hp;
+	gameElems.timeLeft.innerHTML = Math.ceil(game.timeLeft / FPS); 
 	moveGameElemCenter(gameElems.players[0], game.players[0].x, game.players[0].y);
 	rotateGameElement(gameElems.players[0], game.players[0].deg);
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {
