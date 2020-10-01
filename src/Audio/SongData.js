@@ -8,6 +8,10 @@ const SONG_LIST = [
 		by:"Kubbi", yt:"DLvrDRRaftQ", site:"https://kubbimusic.com/track/seahorse-dreams", siten:"KubbiMusic.com", sc:"kubbi/seahorse-dreams", ng:538406},
 	{name:"Irregular", intensity:1,
 		by:"PeriTune", yt:"bvgXS3sukT4", site:"https://peritune.com/blog/2020/02/28/irregular/", siten:"PeriTune.com", sc:"sei_peridot/irregular", license:CC_BY_4},
+	{name:"Numina", intensity:1,
+		by:"PeriTune", yt:"xKfHxznQ36I"},
+	{name:"Gothic Dark", intensity:1,
+		by:"PeriTune", yt:"brZWB8cdBDs"},
 	
 ]
 
