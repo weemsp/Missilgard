@@ -35,8 +35,8 @@ Stratoblaster.prototype.update = function (game) {
                 this.cascadeOffsetBy *= -1;
                 this.cascadeCount++;
             }
-            game.addBullet(new StraightBullet(WIDTH/2 + this.cascadeOffset, HEIGHT/5, 5, new VectorPolar(6, Math.PI)));
-            game.addBullet(new StraightBullet(WIDTH/2 - this.cascadeOffset, HEIGHT/5, 5, new VectorPolar(6, Math.PI)));
+            game.addBullet(new StraightBullet(WIDTH/2 + this.cascadeOffset, HEIGHT/5, 12, new VectorPolar(6, Math.PI)));
+            game.addBullet(new StraightBullet(WIDTH/2 - this.cascadeOffset, HEIGHT/5, 12, new VectorPolar(6, Math.PI)));
             this.cascadeOffset += this.cascadeOffsetBy;
 
             this.bulletCD = this.bulletRate;
@@ -54,8 +54,8 @@ Stratoblaster.prototype.update = function (game) {
 
 
     if(this.homingMissiles > 0) {
-        game.addBullet(new HomingBullet(WIDTH / 4, HEIGHT / 5, 3, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
-        game.addBullet(new HomingBullet((WIDTH / 4) * 3, HEIGHT / 5, 3, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
+        game.addBullet(new HomingBullet(WIDTH / 4, HEIGHT / 5, 15, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
+        game.addBullet(new HomingBullet((WIDTH / 4) * 3, HEIGHT / 5, 15, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
     }
 	this.homingMissiles = 2;
 	for (var i = 0; i < game.bullets.length; i++) {
