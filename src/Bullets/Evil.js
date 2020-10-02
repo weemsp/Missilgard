@@ -3,7 +3,7 @@ function EvilBullet(x, y, radius, velocity) {
 	this.y = y;
 	this.radius = radius;
     this.velocity = velocity;
-    this.srcImage = "src/Images/Bullets/Bullet.png";
+    this.srcImage = "src/Images/Bullets/BulletMedium.png";
 
 }
 EvilBullet.prototype = Object.create(Bullet.prototype);

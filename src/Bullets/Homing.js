@@ -14,7 +14,7 @@ HomingBullet.prototype.update = function (game) {
         this.deg = radToDeg(this.velocity.theta);
         this.homingCD--;
      } else {
-        this.srcImage = "src/Images/Bullets/HomingMissileSqauare.png";
+        this.srcImage = "src/Images/Bullets/HomingMissileSquare.png";
      }
     this.x += this.velocity.x * .6;
     this.y += this.velocity.y * .6;
