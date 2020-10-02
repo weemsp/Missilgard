@@ -20,8 +20,10 @@ function viewGame(game) {
 		return; //this might be dumb but I don't currently care -P
 	gameElems.box.hidden = false;
 	menuElems.box.hidden = true;
+	gameElems.boss.src = game.boss.img;
+	gameElems.boss.style.top = game.boss.imgOffset;
 	gameElems.health.innerHTML = game.players[0].hp;
-	gameElems.timeLeft.innerHTML = Math.ceil(game.timeLeft / FPS); 
+	gameElems.timeLeft.innerHTML = Math.ceil(game.timeLeft / FPS);
 	moveGameElemCenter(gameElems.players[0], game.players[0].x, game.players[0].y);
 	rotateGameElement(gameElems.players[0], game.players[0].deg);
 	for (var i = 0; i < NUM_BULLET_IMAGES; i++) {

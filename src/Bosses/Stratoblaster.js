@@ -8,17 +8,19 @@ function Stratoblaster() {
     this.cascadeOffset = 0;
     this.cascadeOffsetBy = 75;
     this.cascadeCount = 0;
-    
+
 }
 
 
 Stratoblaster.prototype = Object.create(Boss.prototype);
 Stratoblaster.prototype.bulletRate = 4;
 Stratoblaster.prototype.song = "Seahorse Dreams";
+Stratoblaster.prototype.img = 'src/Images/Bosses/alienshiptex.png';
+Stratoblaster.prototype.imgOffset = -550+"px";
 Stratoblaster.prototype.update = function (game) {
 
     //console.log(game.getRandomPlayer())
-    
+
     if(this.waveCount <= 0) {
         this.bulletCD--;
         this.bulletRate = 13;
@@ -49,7 +51,7 @@ Stratoblaster.prototype.update = function (game) {
             this.bulletCD = 40;
         }
     }
-    
+
 
     if(this.homingMissiles > 0) {
         game.addBullet(new HomingBullet(WIDTH / 4, HEIGHT / 5, 3, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));

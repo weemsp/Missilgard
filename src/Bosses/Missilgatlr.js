@@ -11,6 +11,8 @@ Missilgatlr.prototype.scatterCD = FPS;
 Missilgatlr.prototype.scatterTheta = 0;
 Missilgatlr.prototype.scatterSide = 0;
 Missilgatlr.prototype.song = "Flap 2";
+Missilgatlr.prototype.img = 'src/Images/Bosses/destroyer.png';
+Missilgatlr.prototype.imgOffset = -700+"px";
 Missilgatlr.prototype.update = function(game) {
 	//console.log(game.getRandomPlayer())
 	if (this.bulletsLeft > 0) {

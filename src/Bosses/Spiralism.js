@@ -7,8 +7,10 @@ function Spiralism() {
 
 Spiralism.prototype = Object.create(Boss.prototype);
 Spiralism.prototype.song = "Numina";
+Spiralism.prototype.img = 'src/Images/Bosses/starbase-tex.png';
+Spiralism.prototype.imgOffset = -550+"px";
 Spiralism.prototype.update = function(game) {
-  
+
     if(this.spiralCD <= 0){
         this.spiralCD = 6;
         game.addBullet(new SpiralBullet(WIDTH/2, HEIGHT/2, 6, this.theta1, 150, 20));
@@ -27,7 +29,7 @@ Spiralism.prototype.update = function(game) {
     }
 
     if(this.bulletCD <= 0) {
-        this.bulletCD = 6; 
+        this.bulletCD = 6;
         game.addBullet(new StraightBullet(WIDTH/2, HEIGHT/2, 5, new VectorPolar(6, angleCoordToObj(WIDTH/2, HEIGHT/2, game.getRandomPlayer()))));
         game.addBullet(new StraightBullet(WIDTH/2, HEIGHT/2, 5, new VectorPolar(6, Math.PI * 0.00 + this.aimCenter1)));
         game.addBullet(new StraightBullet(WIDTH/2, HEIGHT/2, 5, new VectorPolar(6, Math.PI * 0.75 + this.aimCenter1)));
