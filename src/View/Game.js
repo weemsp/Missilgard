@@ -30,6 +30,8 @@ function viewGame(game) {
 		if (game.bullets[i]) {
 			gameElems.bullets[i].hidden = false;
 			gameElems.bullets[i].src = game.bullets[i].srcImage;
+			gameElems.bullets[i].width = game.bullets[i].radius*2 +"px";
+			gameElems.bullets[i].height = game.bullets[i].radius*2 +"px";
 			moveGameElemCenter(gameElems.bullets[i], game.bullets[i].x, game.bullets[i].y);
 			rotateGameElement(gameElems.bullets[i], game.bullets[i].deg);
 		} else {
