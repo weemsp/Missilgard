@@ -17,5 +17,4 @@ OrbitBullet.prototype.update = function(game) {
     //console.log(temp);
     this.x = this.originX + (this.r * Math.cos(this.theta));
     this.y = this.originY + (this.r * Math.sin(this.theta));
-    console.log(this.x, " ",  this.y)
 }
