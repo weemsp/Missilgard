@@ -1,21 +1,24 @@
-function OrbitBullet(originX, originY, radius, theta, tInterval) {
+function OrbitBullet(originX, originY, radius, orbitRadius, theta, tInterval, timeLeft) {
     this.originX = originX;
     this.originY = originY;
     this.radius = radius; // size of bullet
+    this.orbitRadius = orbitRadius; // actual radius of the circular motion
     this.theta = theta; // in radians
     this.tInterval = tInterval; // in radians 
     this.x = originX;
     this.y = originY;
-    this.r = 300; // actual radius of the circular motion, 250 px from the origin
+    this.timeLeft = timeLeft;
 
 }
 
 OrbitBullet.prototype = Object.create(Bullet.prototype);
+OrbitBullet.prototype.isAlive = function() {
+    return this.timeLeft > 0;
+}
 OrbitBullet.prototype.update = function(game) {
     this.theta += this.tInterval;
-    //var temp = new VectorPolar(this.r, this.theta);
+    var temp = new VectorPolar(this.orbitRadius, this.theta);
     //console.log(temp);
-    this.x = this.originX + (this.r * Math.cos(this.theta));
-    this.y = this.originY + (this.r * Math.sin(this.theta));
-    console.log(this.x, " ",  this.y)
+    this.x = this.originX + temp.x;
+    this.y = this.originY + temp.y;
 }
