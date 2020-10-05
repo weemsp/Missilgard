@@ -2859,6 +2859,21 @@ input, select, textarea {
 
 		}
 
+		.music {
+			list-style: none;
+			width: 100%;
+		}
+
+		.music li {
+			margin-left: 0;
+			margin-top: 0;
+			width: 100%;
+		}
+
+		.music p{
+			width: 100%;
+		}
+
 /* Statistics */
 
 	.statistics {
