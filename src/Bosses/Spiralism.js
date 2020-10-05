@@ -56,7 +56,13 @@ Spiralism.prototype.update = function(game) {
 
     if(this.orbitCD <= 0) {
         this.orbitCD = 10;
-        game.addBullet(new OrbitBullet(WIDTH/2, HEIGHT/2, 5, Math.PI, 0.05*Math.PI));
+        /*
+        if(this.orbitClip % 2 == 0) {
+            this.offset += 50;
+        }
+        */
+        console.log(this.offset);
+        game.addBullet(new OrbitBullet(WIDTH/2, HEIGHT/2, 5, 400, Math.PI, 0.01 * Math.PI, game.timeLeft));
         this.orbitClip --;
     } else if(this.orbitClip > 0) {
         this.orbitCD --;
@@ -65,5 +71,6 @@ Spiralism.prototype.update = function(game) {
     } else if(this.orbitResting == 0){
         this.orbitResting = 60 * 60;
         this.orbitClip = 18;
+        //this.offset = 0;
     }
 }
