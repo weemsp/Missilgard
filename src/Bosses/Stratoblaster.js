@@ -54,8 +54,8 @@ Stratoblaster.prototype.update = function (game) {
 
 
     if(this.homingMissiles > 0) {
-        game.addBullet(new HomingBullet(WIDTH / 4, HEIGHT / 5, 15, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
-        game.addBullet(new HomingBullet((WIDTH / 4) * 3, HEIGHT / 5, 15, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
+        game.addBullet(new HomingBullet(WIDTH / 4, HEIGHT / 5, 30, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
+        game.addBullet(new HomingBullet((WIDTH / 4) * 3, HEIGHT / 5, 30, new VectorPolar(6.66, angleCoordToObj(WIDTH / 2, HEIGHT / 5, game.getRandomPlayer()))));
     }
 	this.homingMissiles = 2;
 	for (var i = 0; i < game.bullets.length; i++) {
